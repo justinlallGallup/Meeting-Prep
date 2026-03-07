@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trust in Media Initiative — Kickoff Meeting Prep</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0F1923;
+  --ink-90: #1B2A38;
+  --ink-70: #3B4E61;
+  --ink-50: #5E7489;
+  --ink-30: #94A7B8;
+  --ink-15: #C5D1DA;
+  --ink-05: #EDF1F4;
+  --cream: #F8F7F4;
+  --white: #FFFFFF;
+  --cardinal: #9B1B30;
+  --cardinal-light: #B8293F;
+  --cardinal-glow: rgba(155,27,48,0.08);
+  --gold: #C4972A;
+  --gold-glow: rgba(196,151,42,0.1);
+  --blue: #1A5276;
+  --blue-glow: rgba(26,82,118,0.08);
+  --teal: #117A65;
+  --teal-glow: rgba(17,122,101,0.08);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --shadow-sm: 0 1px 3px rgba(15,25,35,0.04);
+  --shadow-md: 0 4px 12px rgba(15,25,35,0.06);
+  --shadow-lg: 0 8px 28px rgba(15,25,35,0.08);
+  --radius: 8px;
+  --radius-lg: 14px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+
+/* === HERO === */
+.hero{background:linear-gradient(160deg,var(--ink) 0%,var(--ink-90) 55%,#1e3a52 100%);color:var(--white);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-40%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,rgba(155,27,48,0.12) 0%,transparent 65%);border-radius:50%;}
+.hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(196,151,42,0.08) 0%,transparent 65%);border-radius:50%;}
+.hero-inner{max-width:1140px;margin:0 auto;padding:44px 36px 36px;position:relative;z-index:1;}
+.hero-org{display:flex;gap:8px;align-items:center;margin-bottom:20px;}
+.hero-org-tag{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:4px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);}
+.hero-org-tag.gallup{color:#E6C54F;}
+.hero-org-tag.usc{color:var(--cardinal-light);}
+.hero-org-tag.time{color:#F0A050;}
+.hero-org-tag.mckinsey{color:#5EACD0;}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.7rem);font-weight:700;line-height:1.15;margin-bottom:10px;animation:fadeDown .5s ease-out;}
+.hero-sub{font-size:15px;font-weight:300;color:var(--ink-30);max-width:640px;animation:fadeDown .5s ease-out .1s both;}
+.hero-details{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;animation:fadeDown .5s ease-out .2s both;}
+.detail{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-30);}
+.detail svg{opacity:.5;flex-shrink:0;}
+.detail strong{color:var(--white);font-weight:600;}
+
+/* === COUNTDOWN === */
+.countdown-strip{background:rgba(0,0,0,.25);border-top:1px solid rgba(255,255,255,.04);}
+.countdown-inner{max-width:1140px;margin:0 auto;padding:14px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.cd-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-30);}
+.cd-units{display:flex;gap:5px;align-items:center;}
+.cd-unit{text-align:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:7px;padding:5px 10px;min-width:54px;}
+.cd-unit .num{font-family:var(--font-mono);font-size:20px;font-weight:500;color:var(--white);line-height:1.2;}
+.cd-unit .lbl{font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-50);}
+.cd-sep{font-family:var(--font-mono);font-size:18px;color:var(--ink-50);opacity:.4;}
+
+/* === NAV TABS === */
+.nav{max-width:1140px;margin:0 auto;padding:0 36px;position:sticky;top:0;z-index:100;background:var(--cream);}
+.nav-inner{display:flex;gap:0;border-bottom:2px solid var(--ink-15);overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.nav-tab{padding:14px 20px;font-size:13px;font-weight:600;color:var(--ink-50);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;}
+.nav-tab:hover{color:var(--ink);}
+.nav-tab.active{color:var(--cardinal);border-bottom-color:var(--cardinal);}
+
+/* === SECTIONS === */
+.content{max-width:1140px;margin:0 auto;padding:28px 36px 48px;}
+.section{display:none;animation:fadeUp .35s ease-out;}
+.section.active{display:block;}
+.section-title{font-family:var(--font-display);font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:700;margin-bottom:20px;color:var(--ink);}
+
+/* === CARDS === */
+.card{background:var(--white);border:1px solid rgba(15,25,35,.05);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);overflow:hidden;transition:box-shadow .25s;}
+.card:hover{box-shadow:var(--shadow-md);}
+.card-head{padding:18px 22px 14px;border-bottom:1px solid var(--ink-05);display:flex;align-items:center;gap:9px;}
+.card-head svg{color:var(--cardinal);flex-shrink:0;}
+.card-head h3{font-family:var(--font-body);font-size:14px;font-weight:700;letter-spacing:.2px;}
+.card-body{padding:18px 22px 22px;}
+
+/* === ATTENDEE GRID === */
+.org-group{margin-bottom:32px;}
+.org-group-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:6px;display:inline-block;margin-bottom:16px;}
+.org-gallup{background:rgba(196,151,42,0.12);color:#9A7B1F;}
+.org-usc{background:var(--cardinal-glow);color:var(--cardinal);}
+.org-time{background:rgba(234,120,40,0.1);color:#B55E15;}
+.org-mckinsey{background:var(--blue-glow);color:var(--blue);}
+.attendees-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;}
+.attendee-card{background:var(--white);border:1px solid rgba(15,25,35,.05);border-radius:var(--radius-lg);padding:20px;display:flex;gap:16px;box-shadow:var(--shadow-sm);transition:box-shadow .25s,transform .25s;}
+.attendee-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);}
+.attendee-avatar{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--white);flex-shrink:0;line-height:1;overflow:hidden;position:relative;box-shadow:0 2px 8px rgba(15,25,35,0.12);}
+.attendee-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.attendee-avatar .fallback{display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:18px;font-weight:700;}
+.attendee-avatar img.hidden{display:none;}
+.attendee-avatar img.hidden+.fallback{display:flex;}
+.attendee-info{flex:1;min-width:0;}
+.attendee-name{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:1px;}
+.attendee-role{font-size:12px;color:var(--ink-50);margin-bottom:6px;line-height:1.4;}
+.attendee-bio{font-size:12.5px;color:var(--ink-70);line-height:1.5;}
+.attendee-badges{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap;}
+.badge{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;}
+.badge-inperson{background:var(--teal-glow);color:var(--teal);}
+.badge-virtual{background:rgba(94,172,208,0.1);color:#1A6D9E;}
+.badge-networking{background:var(--gold-glow);color:#8B6914;}
+
+/* === AGENDA === */
+.agenda-item{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--ink-05);}
+.agenda-item:last-child{border-bottom:none;}
+.agenda-time{font-family:var(--font-mono);font-size:12px;font-weight:500;color:var(--ink-50);padding-top:2px;line-height:1.6;}
+.agenda-content h4{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.agenda-content p{font-size:13px;color:var(--ink-70);line-height:1.5;}
+.agenda-tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;margin-top:5px;}
+.tag-present{background:var(--blue-glow);color:var(--blue);}
+.tag-discuss{background:var(--cardinal-glow);color:var(--cardinal);}
+.tag-facilitate{background:var(--gold-glow);color:#8B6914;}
+.tag-info{background:rgba(94,167,184,0.08);color:#1A7A70;}
+
+/* === RUN OF SHOW === */
+.ros-table{width:100%;border-collapse:collapse;font-size:13px;}
+.ros-table thead th{text-align:left;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-50);padding:10px 12px;border-bottom:2px solid var(--ink-15);}
+.ros-table tbody td{padding:10px 12px;border-bottom:1px solid var(--ink-05);vertical-align:top;color:var(--ink-70);}
+.ros-table tbody td:first-child{font-family:var(--font-mono);font-size:12px;color:var(--ink-50);white-space:nowrap;}
+.ros-table tbody td strong{color:var(--ink);font-weight:600;}
+.ros-table tbody tr:hover{background:var(--ink-05);}
+
+/* === FACILITATION === */
+.note-box{background:var(--gold-glow);border-left:3px solid var(--gold);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin-bottom:14px;}
+.note-box h4{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.note-box p{font-size:13px;color:var(--ink-70);line-height:1.6;}
+
+/* === LOGISTICS === */
+.logistics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.logistics-item{background:var(--white);border:1px solid rgba(15,25,35,.05);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-sm);}
+.logistics-item h4{font-size:14px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:7px;}
+.logistics-item p{font-size:13px;color:var(--ink-70);line-height:1.6;}
+.logistics-item a{color:var(--cardinal);text-decoration:none;font-weight:600;}
+.logistics-item a:hover{text-decoration:underline;}
+
+/* === PARKING LOT === */
+.pl-input-wrap{display:flex;gap:8px;margin-bottom:14px;}
+.pl-input{flex:1;border:1px solid var(--ink-15);border-radius:var(--radius);padding:10px 14px;font-family:var(--font-body);font-size:13px;color:var(--ink);background:var(--white);outline:none;transition:border-color .2s,box-shadow .2s;}
+.pl-input:focus{border-color:var(--cardinal);box-shadow:0 0 0 3px var(--cardinal-glow);}
+.pl-btn{background:var(--cardinal);color:var(--white);border:none;border-radius:var(--radius);padding:10px 18px;font-family:var(--font-body);font-size:13px;font-weight:700;cursor:pointer;transition:background .2s,transform .15s;white-space:nowrap;}
+.pl-btn:hover{background:var(--cardinal-light);}
+.pl-btn:active{transform:scale(.97);}
+.pl-list{list-style:none;}
+.pl-item{display:flex;align-items:flex-start;gap:10px;padding:11px 14px;background:var(--white);border:1px solid var(--ink-05);border-radius:var(--radius);margin-bottom:7px;animation:fadeUp .3s ease-out;}
+.pl-num{font-family:var(--font-mono);font-size:11px;color:var(--ink-50);min-width:18px;padding-top:1px;}
+.pl-text{font-size:13px;color:var(--ink);flex:1;}
+.pl-vote{display:flex;align-items:center;gap:3px;background:none;border:1px solid var(--ink-15);border-radius:5px;padding:2px 7px;cursor:pointer;font-family:var(--font-body);font-size:11px;font-weight:700;color:var(--ink-50);transition:all .2s;flex-shrink:0;}
+.pl-vote:hover,.pl-vote.voted{border-color:var(--cardinal);color:var(--cardinal);background:var(--cardinal-glow);}
+.pl-del{background:none;border:none;cursor:pointer;color:var(--ink-30);padding:2px;transition:color .2s;flex-shrink:0;}
+.pl-del:hover{color:#DC2626;}
+.empty-msg{text-align:center;padding:20px;color:var(--ink-30);font-size:13px;}
+
+/* === NETWORKING === */
+.net-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--ink-05);}
+.net-item:last-child{border-bottom:none;}
+.net-name{font-weight:700;font-size:14px;}
+.net-arrow{color:var(--ink-30);margin:0 4px;}
+.net-owner{font-size:13px;color:var(--ink-70);}
+
+/* === PRE-READ CHECKLIST === */
+.pr-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--ink-05);cursor:pointer;}
+.pr-item:last-child{border-bottom:none;}
+.pr-check{width:20px;height:20px;border-radius:50%;border:2px solid var(--ink-30);cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;background:transparent;flex-shrink:0;}
+.pr-check.checked{background:var(--teal);border-color:var(--teal);}
+.pr-check svg{opacity:0;transition:opacity .2s;}
+.pr-check.checked svg{opacity:1;}
+.pr-info h4{font-size:14px;font-weight:600;}
+.pr-info p{font-size:12px;color:var(--ink-50);}
+
+/* === FOOTER === */
+.footer{max-width:1140px;margin:0 auto;padding:16px 36px 40px;text-align:center;font-size:11px;color:var(--ink-30);}
+
+/* === ANIMATIONS === */
+@keyframes fadeDown{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+/* === RESPONSIVE === */
+@media(max-width:680px){
+  .hero-inner,.content,.nav{padding-left:18px;padding-right:18px;}
+  .countdown-inner{padding-left:18px;padding-right:18px;}
+  .attendees-grid{grid-template-columns:1fr;}
+  .logistics-grid{grid-template-columns:1fr;}
+  .agenda-item{grid-template-columns:70px 1fr;gap:10px;}
+  .nav-tab{padding:12px 14px;font-size:12px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-org">
+      <span class="hero-org-tag gallup">Gallup</span>
+      <span class="hero-org-tag usc">USC Annenberg</span>
+      <span class="hero-org-tag time">TIME</span>
+      <span class="hero-org-tag mckinsey">McKinsey</span>
+    </div>
+    <h1>Trust in Media Initiative — Kickoff Meeting</h1>
+    <p class="hero-sub">Internal team prep page. Familiarize yourself with attendees, the agenda, facilitation approach, and logistics before Monday's launch session.</p>
+    <div class="hero-details">
+      <div class="detail">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <strong>Monday, March 9, 2026</strong>&nbsp;· 10:00 – 11:15 AM PT
+      </div>
+      <div class="detail">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        USC Wallis Annenberg Hall · Suite 402
+      </div>
+      <div class="detail">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l5 5-5 5"/><path d="M4 4v7a4 4 0 004 4h12"/></svg>
+        Zoom: <strong>934 4244 8819</strong> · Passcode: 770111
+      </div>
+    </div>
+  </div>
+  <div class="countdown-strip">
+    <div class="countdown-inner">
+      <span class="cd-label">Time until meeting</span>
+      <div class="cd-units">
+        <div class="cd-unit"><div class="num" id="cd-d">--</div><div class="lbl">Days</div></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><div class="num" id="cd-h">--</div><div class="lbl">Hrs</div></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><div class="num" id="cd-m">--</div><div class="lbl">Min</div></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><div class="num" id="cd-s">--</div><div class="lbl">Sec</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== NAV ========== -->
+<div class="nav">
+  <div class="nav-inner">
+    <div class="nav-tab active" onclick="showTab('attendees')">Attendees</div>
+    <div class="nav-tab" onclick="showTab('agenda')">Agenda & Run of Show</div>
+    <div class="nav-tab" onclick="showTab('facilitation')">Facilitation Notes</div>
+    <div class="nav-tab" onclick="showTab('preread')">Pre-Read & Materials</div>
+    <div class="nav-tab" onclick="showTab('logistics')">Logistics</div>
+    <div class="nav-tab" onclick="showTab('parking')">Team Discussion</div>
+  </div>
+</div>
+
+<!-- ========== CONTENT ========== -->
+<div class="content">
+
+<!-- ===== ATTENDEES ===== -->
+<div class="section active" id="attendees">
+  <p class="section-title">Who's in the Room</p>
+
+  <!-- USC ANNENBERG -->
+  <div class="org-group">
+    <div class="org-group-label org-usc">USC Annenberg</div>
+    <div class="attendees-grid">
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:var(--cardinal);"><img src="https://annenberg.usc.edu/sites/default/files/styles/landing_page_hero_ultra_wide/public/Willow-Bay-2.jpg?itok=ciRVsAxf" alt="Willow Bay" onerror="this.classList.add('hidden')"><span class="fallback">WB</span></div>
+        <div class="attendee-info">
+          <div class="attendee-name">Willow Bay</div>
+          <div class="attendee-role">Dean, USC Annenberg School for Communication and Journalism</div>
+          <div class="attendee-bio">Veteran broadcast journalist (ABC News, CNN, Bloomberg) and the first female dean of USC Annenberg. Oversees ~300 faculty/staff and ~3,000 students. Champion of media innovation, digital literacy, and equity in media. Will open and close the kickoff.</div>
+          <div class="attendee-badges">
+            <span class="badge badge-inperson">In-Person</span>
+            <span class="badge badge-networking">Network: JL</span>
+          </div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#B8293F;"><img src="https://images.squarespace-cdn.com/content/v1/628d843b9f96762c42b05b30/1660859035612-51S5LVFR5AX9A8L2J0I0/Mendoza%2BHeadshot.jpg" alt="Tracy Mendoza" onerror="this.classList.add('hidden')"><span class="fallback">TM</span></div>
+        <div class="attendee-info">
+          <div class="attendee-name">Tracy Mendoza</div>
+          <div class="attendee-role">Associate Dean, Development &amp; External Relations, USC Annenberg</div>
+          <div class="attendee-bio">15+ years at USC leading fundraising and partner engagement. Known internally as a "matchmaker" connecting donors/orgs with impact areas. Primary logistics contact for the event. Will greet the team in the lobby at 9:50 AM.</div>
+          <div class="attendee-badges">
+            <span class="badge badge-inperson">In-Person</span>
+            <span class="badge badge-networking">Network: Kristjan / MK</span>
+          </div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#D4556A;">EC</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Emily Cavalcanti</div>
+          <div class="attendee-role">Associate Dean, Communications &amp; Marketing, USC Annenberg</div>
+          <div class="attendee-bio">Leads USC Annenberg's award-winning communications office (multiple CASE awards). University of Chicago educated. Oversees all media relations, marketing strategy, and brand positioning for the school.</div>
+          <div class="attendee-badges">
+            <span class="badge badge-inperson">In-Person</span>
+            <span class="badge badge-networking">Network: Kristjan</span>
+          </div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#C0354E;"><img src="https://images.squarespace-cdn.com/content/v1/61730f7c8eae8a06a60ab93b/4d8a1ee5-c6e7-4fdd-9882-2601a2eaef0b/er.jpg" alt="Erica Rosenthal" onerror="this.classList.add('hidden')"><span class="fallback">ER</span></div>
+        <div class="attendee-info">
+          <div class="attendee-name">Erica Rosenthal</div>
+          <div class="attendee-role">Director of Research, USC Annenberg Norman Lear Center</div>
+          <div class="attendee-bio">Ph.D. in social psychology from Claremont Graduate University. 20+ years studying media's impact on knowledge, attitudes, and behavior. Researches narrative change, health communication, and media literacy. Will lead USC's research contribution to the initiative.</div>
+          <div class="attendee-badges">
+            <span class="badge badge-inperson">In-Person</span>
+            <span class="badge badge-networking">Network: Camille</span>
+          </div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#A83050;">SI</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Stacy Ingber</div>
+          <div class="attendee-role">Special Assistant to Dean Willow Bay</div>
+          <div class="attendee-bio">Key operational contact for the dean's office. Secondary logistics contact for the visit. Reachable at 310-729-6670 if you have trouble finding the building.</div>
+          <div class="attendee-badges">
+            <span class="badge badge-inperson">In-Person</span>
+            <span class="badge badge-networking">Network: MK</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIME -->
+  <div class="org-group">
+    <div class="org-group-label org-time">TIME Magazine</div>
+    <div class="attendees-grid">
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#D4820E;"><img src="https://assets.swoogo.com/uploads/full/4067471-6669dc3088186.png" alt="Jess Sibley" onerror="this.classList.add('hidden')"><span class="fallback">JS</span></div>
+        <div class="attendee-info">
+          <div class="attendee-name">Jess Sibley</div>
+          <div class="attendee-role">Chief Executive Officer, TIME</div>
+          <div class="attendee-bio">Appointed CEO in Nov. 2022 by owners Marc and Lynne Benioff. Transformed TIME into a diversified media company with film/TV studio (TIME Studios), global events, and 120M+ audience. Previously COO of Forbes; held senior roles at WSJ, Bloomberg, and Condé Nast.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#C47A10;">LR</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Lilly Rothman</div>
+          <div class="attendee-role">Managing Editor, TIME</div>
+          <div class="attendee-bio">Oversees both TIME's print magazine and cross-platform newsroom operations. Founding editor of TIME's history section. Yale (History) and CUNY School of Journalism. Has interviewed John Lewis, Yoko Ono, and Madeleine Albright, among many others.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#B06E0D;">BW</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Bridget Wilson</div>
+          <div class="attendee-role">SVP, Head of Business Development &amp; Strategic Partnerships, TIME</div>
+          <div class="attendee-bio">Leads business development, strategic partnerships, and revenue transformation at TIME. Previously served as VP of Business Development and interim Chief of Staff to the CEO. Background in media partnerships, PR strategy, and content production (SiriusXM).</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#A56209;">CM</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Cate Matthews</div>
+          <div class="attendee-role">Executive Editorial Director, Franchises &amp; Events, TIME</div>
+          <div class="attendee-bio">Oversees marquee editorial franchises including TIME100, TIME100 Next, Women of the Year, and the Earth Awards. Instrumental in creating and expanding TIME's signature recognition programs. BA from Ohio University; previously at HuffPost and A Plus.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- McKINSEY -->
+  <div class="org-group">
+    <div class="org-group-label org-mckinsey">McKinsey &amp; Company</div>
+    <div class="attendees-grid">
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:var(--blue);"><img src="https://www.mckinsey.com/~/media/mckinsey/our%20people/marc%20brodherson/marc_brodherson_896x1080_fc.png?mw=726&car=1:1&cpy=0" alt="Marc Brodherson" onerror="this.classList.add('hidden')"><span class="fallback">MB</span></div>
+        <div class="attendee-info">
+          <div class="attendee-name">Marc Brodherson</div>
+          <div class="attendee-role">Senior Partner, McKinsey — New York</div>
+          <div class="attendee-bio">Leader in McKinsey's Technology, Media &amp; Telecom (TMT) practice. 10+ years helping media and information companies transform through digital and analytics. Deep expertise in advertising technology, media measurement, and data science. Serves on the board of the Center for Communications. Harvard Law School graduate.</div>
+          <div class="attendee-badges">
+            <span class="badge badge-inperson">In-Person</span>
+            <span class="badge badge-networking">Network: JL / Camille</span>
+          </div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#1D6A92;">MG</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Max Gleischman</div>
+          <div class="attendee-role">Partner, Global Head of Strategic Communications, McKinsey</div>
+          <div class="attendee-bio">Senior strategic communications advisor to senators, ambassadors, CEOs, and foundation leaders. Nearly 20 years of experience in integrated communications. Previously at Breakwater Strategy, The Glover Park Group, and the U.S. Senate (office of Sen. Dick Durbin). Board member of ICTJ.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#267DAA;"><img src="https://www.mckinsey.com/~/media/mckinsey/our%20people/clayton%20o%20toole/clayton_otoole_896x1080_fc.png?mw=726&car=1:1&cpy=0" alt="Clayton O'Toole" onerror="this.classList.add('hidden')"><span class="fallback">CO</span></div>
+        <div class="attendee-info">
+          <div class="attendee-name">Clayton O'Toole</div>
+          <div class="attendee-role">Partner, McKinsey — Minneapolis</div>
+          <div class="attendee-bio">Leader in McKinsey's Consumer and TMT practices. Specializes in media company turnarounds, digital business launches, and growth strategy for consumer-facing brands. Previously based in Sydney serving Asia–Pacific clients. Columbia Business School MBA; UVA undergrad.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLUP -->
+  <div class="org-group">
+    <div class="org-group-label org-gallup">Gallup (Our Team)</div>
+    <div class="attendees-grid">
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:var(--gold);">JL</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Justin Lall</div>
+          <div class="attendee-role">Principal, Gallup · Meeting Facilitator</div>
+          <div class="attendee-bio">Leading the kickoff facilitation. Will moderate all discussion sections. Primary relationship owner with Dean Bay and Marc Brodherson. Based in Chicago. Strengths: Strategic, Significance, Competition, Command, Self-Assurance.</div>
+          <div class="attendee-badges"><span class="badge badge-inperson">In-Person</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#B08520;">CL</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Camille Lloyd</div>
+          <div class="attendee-role">Research Director, Gallup</div>
+          <div class="attendee-bio">Leading the research design side of the initiative. Key connection to Erica Rosenthal for overall research design alignment. Will present on the collaborative research approach during the run of show.</div>
+          <div class="attendee-badges"><span class="badge badge-inperson">In-Person</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#A07A1C;">KA</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Kristjan Archer</div>
+          <div class="attendee-role">Communications Lead, Gallup</div>
+          <div class="attendee-bio">Leading the communications vision for the initiative. Will present on comms strategy including anchor convenings (Aspen, Davos, SxSW). Timekeeper during discussion sections. Networking targets: Tracy Mendoza and Emily Cavalcanti. Meeting with Erica Rosenthal re: future of journalism perspective.</div>
+          <div class="attendee-badges"><span class="badge badge-inperson">In-Person</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#8C6B16;">MK</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Mary Kathryn Aviles</div>
+          <div class="attendee-role">Project Director, Gallup</div>
+          <div class="attendee-bio">Presenting the project timeline and key milestones. Note-taker during all discussion sections. Networking targets: Tracy Mendoza and Stacy Ingber.</div>
+          <div class="attendee-badges"><span class="badge badge-inperson">In-Person</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#7A5D12;">JD</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Jennifer Necci Dineen</div>
+          <div class="attendee-role">Survey Methodologist, Gallup</div>
+          <div class="attendee-bio">Joining virtually to support survey design and methodology discussions.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#6B510F;">AD</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Andrew Dugan</div>
+          <div class="attendee-role">Principal Researcher, Gallup</div>
+          <div class="attendee-bio">Joining virtually to support the research framework and methodology discussions.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#5C440C;">SH</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Sarah Hogenboom-Jones</div>
+          <div class="attendee-role">Implementation Lead, Gallup</div>
+          <div class="attendee-bio">Joining virtually to support implementation planning and operational logistics for the initiative.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+      <div class="attendee-card">
+        <div class="attendee-avatar" style="background:#4D3909;">JM</div>
+        <div class="attendee-info">
+          <div class="attendee-name">Justin McCarthy</div>
+          <div class="attendee-role">News Team Lead, Gallup</div>
+          <div class="attendee-bio">Joining virtually. Leads Gallup's news team — important for the media trust narrative and public-facing reporting strategy.</div>
+          <div class="attendee-badges"><span class="badge badge-virtual">Virtual</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AGENDA & RUN OF SHOW ===== -->
+<div class="section" id="agenda">
+  <p class="section-title">Agenda &amp; Internal Run of Show</p>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-head">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <h3>Official Client-Facing Agenda (10:00 – 11:15 AM)</h3>
+    </div>
+    <div class="card-body">
+      <div class="agenda-item">
+        <div class="agenda-time">9:50 AM</div>
+        <div class="agenda-content"><h4>Arrive on Campus</h4><p>Tracy Mendoza meets the team in the lobby of Wallis Annenberg Hall (3630 Watt Way at Childs Way, next to USC Bookstore).</p><span class="agenda-tag tag-info">Logistics</span></div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">10:00 AM<br>10 min</div>
+        <div class="agenda-content"><h4>Welcome &amp; Introductions</h4><p>Dean Willow Bay opens the session with welcome remarks and round-table introductions.</p><span class="agenda-tag tag-present">Presentation · Dean Bay</span></div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">10:10 AM<br>10–15 min</div>
+        <div class="agenda-content"><h4>Partnership Alignment &amp; Goals</h4><p>What are primary goals for this collaboration? What does success look like for USC Annenberg? What KPIs would measure impact?</p><span class="agenda-tag tag-discuss">Discussion · JL Facilitates</span></div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">10:25 AM<br>15 min</div>
+        <div class="agenda-content"><h4>Desired Headlines &amp; Narrative Ambition</h4><p>What hypothetical headlines should result from the research?</p><span class="agenda-tag tag-discuss">Discussion · JL Facilitates</span></div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">10:40 AM<br>10 min</div>
+        <div class="agenda-content"><h4>Priority Audiences &amp; Influence Strategy</h4><p>Who do you most want this research to reach — policymakers, general public, newsrooms, academics, influencers?</p><span class="agenda-tag tag-discuss">Discussion · JL Facilitates</span></div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">10:50 AM<br>10–15 min</div>
+        <div class="agenda-content"><h4>Strategic Research Questions &amp; Key Topic Areas</h4><p>Beyond trust in media, what related topic areas feel essential to include?</p><span class="agenda-tag tag-discuss">Discussion · JL Facilitates</span></div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">11:10 AM<br>5 min</div>
+        <div class="agenda-content"><h4>Closing</h4><p>Dean Willow Bay delivers closing remarks.</p><span class="agenda-tag tag-present">Closing · Dean Bay</span></div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">11:15 AM</div>
+        <div class="agenda-content"><h4>End Visit</h4><p>Use post-meeting networking time to engage assigned contacts (see Facilitation Notes tab).</p><span class="agenda-tag tag-info">Networking</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <h3>Internal Run of Show (Gallup Eyes Only)</h3>
+    </div>
+    <div class="card-body" style="overflow-x:auto;">
+      <p style="font-size:13px;color:var(--ink-70);margin-bottom:14px;">Note: The ROS picks up at slide 5 / 11:10 AM mark, following Dean Bay's allotted introductions time. All slide references correspond to the Trust in Media Initiative Kickoff Deck.</p>
+      <table class="ros-table">
+        <thead><tr><th>Time</th><th>Dur.</th><th>Item</th><th>Slide</th><th>Lead</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>11:10</td><td>2 min</td><td><strong>Kick-off &amp; Context</strong></td><td>5</td><td>JL</td><td>Set the stage: why this initiative, why now; reference Gallup historical media trust trends</td></tr>
+          <tr><td>11:12</td><td>1 min</td><td><strong>Project Overview: Structure</strong></td><td>6</td><td>JL</td><td>Key specs: frequency, sample, mode, length, deliverables</td></tr>
+          <tr><td>11:13</td><td>2 min</td><td><strong>Collaborative Approach</strong></td><td>6</td><td>Camille</td><td>Why this partnership model works; reference Gallup collaborative project precedent</td></tr>
+          <tr><td>11:15</td><td>1 min</td><td><strong>Comms Strategy</strong></td><td>6</td><td>Kristjan</td><td>Comms vision; reference anchor convenings (Aspen, Davos, SxSW)</td></tr>
+          <tr><td>11:16</td><td>2 min</td><td><strong>Timeline Overview</strong></td><td>7</td><td>MK</td><td>Walk through tentative project timeline and key milestones</td></tr>
+          <tr><td>11:18</td><td>8 min</td><td><strong>Partnership Alignment &amp; Goals</strong></td><td>8</td><td>JL (mod) · MK (notes) · Kristjan (time)</td><td>Q1: Success? (3 min) · Q2: KPIs? (3 min) · Q3: Internal strategic goals? (2 min)</td></tr>
+          <tr><td>11:26</td><td>5 min</td><td><strong>Priority Audiences &amp; Influence Strategy</strong></td><td>9</td><td>JL (mod) · MK (notes) · Kristjan (time)</td><td>Rank priority audiences; identify specific decision-makers or institutions</td></tr>
+          <tr><td>11:31</td><td>2 min</td><td><strong>Illustrative Headlines: Setup</strong></td><td>10</td><td>JL</td><td>Set up the illustrative headline directions</td></tr>
+          <tr><td>11:33</td><td>2 min</td><td><strong>Headlines Walk-through</strong></td><td>10</td><td>Kristjan</td><td>High-level run-through of illustrative headline directions</td></tr>
+          <tr><td>11:35</td><td>5 min</td><td><strong>Headlines: Open Floor</strong></td><td>10</td><td>All</td><td>Reactions and dialogue on headline directions and research framing</td></tr>
+          <tr><td>11:40</td><td>1 min</td><td><strong>Core Research Domains: Setup</strong></td><td>11</td><td>JL</td><td>Introduce the research domain areas and topic framework</td></tr>
+          <tr><td>11:41</td><td>2 min</td><td><strong>Domains Walk-through</strong></td><td>11</td><td>Camille</td><td>High-level overview of illustrative research domains</td></tr>
+          <tr><td>11:43</td><td>6 min</td><td><strong>Domains: Open Floor</strong></td><td>11</td><td>All</td><td>Dialogue and reactions on research domains and topic priorities</td></tr>
+          <tr><td>11:49</td><td>4 min</td><td><strong>Open Discussion &amp; Q&amp;A</strong></td><td>—</td><td>All</td><td>General questions, additional input, open dialogue</td></tr>
+          <tr><td>11:53</td><td>4 min</td><td><strong>Next Steps</strong></td><td>12</td><td>JL</td><td>Action items: cadence, timeline, decision-maker confirmation, working sessions</td></tr>
+          <tr><td>11:57</td><td>1 min</td><td><strong>Close</strong></td><td>—</td><td>Dean Bay</td><td>Closing remarks</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FACILITATION NOTES ===== -->
+<div class="section" id="facilitation">
+  <p class="section-title">Facilitation Approach &amp; Networking Assignments</p>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-head">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
+      <h3>Key Facilitation Principles (from Justin's email)</h3>
+    </div>
+    <div class="card-body">
+      <div class="note-box">
+        <h4>Create space — don't fill it</h4>
+        <p>In the discussion sections, our role is mainly to create space for the clients to react, shape, and brainstorm. Tee up the questions, offer brief framing where helpful, and then let USC, TIME, and McKinsey do most of the talking. This ensures the conversation reflects their priorities and gives us the input we need.</p>
+      </div>
+      <div class="note-box">
+        <h4>Save the brainstorming for later</h4>
+        <p>Don't go too far into brainstorming on our end during the kickoff. We'll have other working sessions to dig in together, pressure-test ideas, and do active ideation. For this meeting: strong facilitation, clear framing, room for client input.</p>
+      </div>
+      <div class="note-box">
+        <h4>Internal roles during discussion sections</h4>
+        <p><strong>JL</strong> = Moderator (frames each question, manages flow) · <strong>MK</strong> = Note-taker · <strong>Kristjan</strong> = Timekeeper</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-head">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      <h3>Pre/Post Meeting Networking Assignments</h3>
+    </div>
+    <div class="card-body">
+      <p style="font-size:13px;color:var(--ink-70);margin-bottom:14px;">Use pre- and post-meeting networking time to engage the following contacts:</p>
+      <div class="net-item"><span class="net-name">Dean Willow Bay</span><span class="net-arrow">→</span><span class="net-owner"><strong>JL</strong></span></div>
+      <div class="net-item"><span class="net-name">Marc Brodherson</span><span class="net-arrow">→</span><span class="net-owner"><strong>JL / Camille</strong></span></div>
+      <div class="net-item"><span class="net-name">Tracy Mendoza</span><span class="net-arrow">→</span><span class="net-owner"><strong>Kristjan / MK</strong></span></div>
+      <div class="net-item"><span class="net-name">Emily Cavalcanti</span><span class="net-arrow">→</span><span class="net-owner"><strong>Kristjan</strong></span></div>
+      <div class="net-item"><span class="net-name">Erica Rosenthal</span><span class="net-arrow">→</span><span class="net-owner"><strong>Camille</strong></span></div>
+      <div class="net-item"><span class="net-name">Stacy Ingber</span><span class="net-arrow">→</span><span class="net-owner"><strong>MK</strong></span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <h3>Post-Kickoff Meetings</h3>
+    </div>
+    <div class="card-body">
+      <div class="note-box">
+        <h4>~11:15 AM — Meeting with Erica Rosenthal (USC Research Lead)</h4>
+        <p>Immediately following the kickoff. <strong>Camille</strong>: helpful for informing overall research design. <strong>Kristjan</strong>: can help figure out USC's perspective on the future of journalism.</p>
+      </div>
+      <div class="note-box">
+        <h4>12:30 PM — Meeting with Rebecca Haggerty</h4>
+        <p>USC comms professor and former executive producer who can help advise on the survey instrument.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRE-READ ===== -->
+<div class="section" id="preread">
+  <p class="section-title">Pre-Read Materials</p>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-head">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      <h3>Reading Checklist</h3>
+    </div>
+    <div class="card-body">
+      <div class="pr-item" onclick="togglePR(this)">
+        <button class="pr-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>
+        <div class="pr-info"><h4>Trust in Media Initiative — Kickoff Deck (PPTX)</h4><p>The client-facing presentation deck for the meeting</p></div>
+      </div>
+      <div class="pr-item" onclick="togglePR(this)">
+        <button class="pr-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>
+        <div class="pr-info"><h4>Kickoff Meeting Pre-Read (JRL)</h4><p>Context, discussion questions, and illustrative headline directions for each agenda section</p></div>
+      </div>
+      <div class="pr-item" onclick="togglePR(this)">
+        <button class="pr-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>
+        <div class="pr-info"><h4>Internal Run of Show (DOCX)</h4><p>Minute-by-minute timing, slide references, and individual roles</p></div>
+      </div>
+      <div class="pr-item" onclick="togglePR(this)">
+        <button class="pr-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>
+        <div class="pr-info"><h4>Official Launch Meeting Agenda (PDF)</h4><p>Client-shared agenda with full attendee list, Zoom info, parking instructions, and campus map</p></div>
+      </div>
+      <div class="pr-item" onclick="togglePR(this)">
+        <button class="pr-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>
+        <div class="pr-info"><h4>Justin's Prep Email</h4><p>Facilitation philosophy, networking assignments, and post-kickoff meeting details</p></div>
+      </div>
+      <div class="pr-item" onclick="togglePR(this)">
+        <button class="pr-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></button>
+        <div class="pr-info"><h4>Gallup Trust in Media Historical Data</h4><p><a href="https://news.gallup.com/poll/695762/trust-media-new-low.aspx" target="_blank" style="color:var(--cardinal);font-weight:600;">Trust in Media at New Low of 28% in U.S.</a> — Key reference for the "why now" framing</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <h3>Key Background Context</h3>
+    </div>
+    <div class="card-body">
+      <p style="font-size:13.5px;color:var(--ink-70);line-height:1.7;">
+        In the 1970s, nearly three out of four American adults had at least a fair amount of trust in mass media. Today, only 28% of Americans report trusting the media. The Trust in Media Initiative will be a long-term, semi-annual national survey of 3,500 U.S. adults measuring public trust in the media, tracking changes over time, and identifying the factors that shape trust across different groups of Americans. This is a collaborative initiative between Gallup, USC Annenberg, TIME, and McKinsey.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LOGISTICS ===== -->
+<div class="section" id="logistics">
+  <p class="section-title">Logistics &amp; Getting There</p>
+  <div class="logistics-grid">
+    <div class="logistics-item">
+      <h4>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cardinal)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Venue
+      </h4>
+      <p><strong>USC Wallis Annenberg Hall</strong><br>3630 Watt Way, Suite 402<br>Los Angeles, CA 90089<br><br>Located next to the USC Bookstore. Tracy Mendoza will meet you in the lobby at <strong>9:50 AM</strong>.</p>
+    </div>
+    <div class="logistics-item">
+      <h4>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cardinal)" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        Parking
+      </h4>
+      <p><strong>Downey Way Structure</strong><br>3667 McClintock Ave, LA 90089<br>Reservation #<strong>403095</strong><br><br><a href="https://www.offstreet.io/events/G7U2E5Y3" target="_blank">Register for parking here</a><br>Enter license plate → Pass Code: <strong>403095</strong><br>Do NOT park in reserved/signed spaces.</p>
+    </div>
+    <div class="logistics-item">
+      <h4>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cardinal)" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+        Campus Gates
+      </h4>
+      <p><strong>Watt Way Gate</strong> (closest): 3700 Watt Way — use for Uber/Lyft<br><strong>McClintock Gate</strong>: 1010 W Jefferson Blvd<br><strong>MacCarthy Gate</strong>: 3501 S Figueroa St<br><br>Ride share drop-off: Watt Way &amp; Downey Way intersection (behind Annenberg Hall).</p>
+    </div>
+    <div class="logistics-item">
+      <h4>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cardinal)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Emergency Contacts
+      </h4>
+      <p><strong>Tracy Mendoza</strong> (Primary)<br>213-422-7339 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="61150c040f050e1b00211412024f040514">[email&#160;protected]</a><br><br><strong>Stacy Ingber</strong> (Secondary)<br>310-729-6670 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e3908a8d84818691a3969080cd868796">[email&#160;protected]</a></p>
+    </div>
+    <div class="logistics-item">
+      <h4>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cardinal)" stroke-width="2"><path d="M15 10l5 5-5 5"/><path d="M4 4v7a4 4 0 004 4h12"/></svg>
+        Virtual Access
+      </h4>
+      <p><a href="https://usc.zoom.us/j/93442448819?pwd=6isxhyBXrl7O9Gmq9KVe7VyoPBKsSV.1" target="_blank">Join Zoom Meeting</a><br>Meeting ID: <strong>934 4244 8819</strong><br>Passcode: <strong>770111</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TEAM DISCUSSION ===== -->
+<div class="section" id="parking">
+  <p class="section-title">Team Discussion Board</p>
+  <p style="font-size:13px;color:var(--ink-50);margin-bottom:20px;">A shared space for the Gallup team to post questions, flag concerns, and discuss topics before Monday's kickoff. All posts are visible to everyone on the team.</p>
+
+  <!-- Name picker -->
+  <div class="card" style="margin-bottom:20px;">
+    <div class="card-body" style="padding:14px 22px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span style="font-size:12px;font-weight:700;color:var(--ink-50);text-transform:uppercase;letter-spacing:1px;">Posting as:</span>
+        <div id="nameButtons" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New post -->
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-head">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      <h3>Start a Discussion</h3>
+    </div>
+    <div class="card-body">
+      <input type="text" class="pl-input" id="postTitle" placeholder="Topic or question…" maxlength="200" style="margin-bottom:8px;width:100%;">
+      <textarea class="pl-input" id="postBody" placeholder="Add context or details (optional)…" maxlength="800" style="width:100%;min-height:60px;resize:vertical;font-family:var(--font-body);"></textarea>
+      <div style="display:flex;gap:8px;margin-top:10px;align-items:center;flex-wrap:wrap;">
+        <select class="pl-input" id="postTag" style="width:auto;min-width:140px;padding:8px 12px;">
+          <option value="question">Question</option>
+          <option value="concern">Concern</option>
+          <option value="idea">Idea</option>
+          <option value="logistics">Logistics</option>
+          <option value="fyi">FYI</option>
+        </select>
+        <button class="pl-btn" onclick="addPost()">Post</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thread list -->
+  <div id="threadList"></div>
+</div>
+
+</div><!-- /content -->
+
+<div class="footer">Internal Prep Page · Trust in Media Initiative · Gallup · Updated March 7, 2026<br>Discussion board is shared — all team members can see posts and replies.</div>
+
+<style>
+/* === DISCUSSION BOARD STYLES === */
+.thread-card{background:var(--white);border:1px solid rgba(15,25,35,.05);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);margin-bottom:14px;overflow:hidden;transition:box-shadow .25s;}
+.thread-card:hover{box-shadow:var(--shadow-md);}
+.thread-header{padding:18px 22px 14px;display:flex;gap:12px;align-items:flex-start;}
+.thread-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--white);flex-shrink:0;box-shadow:0 1px 4px rgba(15,25,35,0.1);}
+.thread-meta{flex:1;min-width:0;}
+.thread-author{font-size:13px;font-weight:700;color:var(--ink);}
+.thread-time{font-size:11px;color:var(--ink-30);margin-left:6px;font-weight:400;}
+.thread-title{font-size:15px;font-weight:700;color:var(--ink);margin-top:4px;}
+.thread-body{font-size:13px;color:var(--ink-70);line-height:1.6;margin-top:4px;}
+.thread-tag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 7px;border-radius:3px;margin-top:6px;}
+.tag-question{background:var(--blue-glow);color:var(--blue);}
+.tag-concern{background:var(--cardinal-glow);color:var(--cardinal);}
+.tag-idea{background:var(--teal-glow);color:var(--teal);}
+.tag-logistics{background:var(--gold-glow);color:#8B6914;}
+.tag-fyi{background:rgba(94,167,184,0.08);color:#1A7A70;}
+.thread-actions{padding:0 22px 6px;display:flex;gap:12px;align-items:center;}
+.thread-action-btn{background:none;border:none;cursor:pointer;font-family:var(--font-body);font-size:12px;font-weight:600;color:var(--ink-50);display:flex;align-items:center;gap:4px;padding:6px 0;transition:color .2s;}
+.thread-action-btn:hover{color:var(--cardinal);}
+.thread-action-btn.voted{color:var(--cardinal);}
+.thread-action-btn svg{width:14px;height:14px;}
+.thread-replies{border-top:1px solid var(--ink-05);padding:0 22px 4px;background:var(--cream);}
+.reply{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--ink-05);}
+.reply:last-child{border-bottom:none;}
+.reply-avatar{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--white);flex-shrink:0;}
+.reply-content{flex:1;}
+.reply-author{font-size:12px;font-weight:700;color:var(--ink);}
+.reply-time{font-size:10px;color:var(--ink-30);margin-left:5px;font-weight:400;}
+.reply-text{font-size:13px;color:var(--ink-70);line-height:1.5;margin-top:2px;}
+.reply-input-wrap{display:flex;gap:8px;padding:10px 0;align-items:center;}
+.reply-input{flex:1;border:1px solid var(--ink-15);border-radius:var(--radius);padding:8px 12px;font-family:var(--font-body);font-size:12px;color:var(--ink);background:var(--white);outline:none;}
+.reply-input:focus{border-color:var(--cardinal);box-shadow:0 0 0 3px var(--cardinal-glow);}
+.reply-btn{background:var(--cardinal);color:var(--white);border:none;border-radius:var(--radius);padding:8px 14px;font-family:var(--font-body);font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.reply-btn:hover{background:var(--cardinal-light);}
+.name-btn{padding:6px 14px;border-radius:20px;font-family:var(--font-body);font-size:12px;font-weight:600;border:1px solid var(--ink-15);background:var(--white);color:var(--ink-70);cursor:pointer;transition:all .2s;}
+.name-btn:hover{border-color:var(--cardinal);color:var(--cardinal);}
+.name-btn.selected{background:var(--cardinal);color:var(--white);border-color:var(--cardinal);}
+.thread-delete{background:none;border:none;cursor:pointer;color:var(--ink-30);padding:4px;transition:color .2s;margin-left:auto;}
+.thread-delete:hover{color:#DC2626;}
+.empty-threads{text-align:center;padding:40px 20px;color:var(--ink-30);font-size:14px;}
+.empty-threads svg{display:block;margin:0 auto 10px;opacity:.3;}
+</style>
+
+<script>
+// === COUNTDOWN ===
+const mtg=new Date('2026-03-09T10:00:00-07:00');
+function tick(){const n=new Date(),d=mtg-n;if(d<=0){['cd-d','cd-h','cd-m','cd-s'].forEach(i=>document.getElementById(i).textContent='0');return;}document.getElementById('cd-d').textContent=Math.floor(d/864e5);document.getElementById('cd-h').textContent=String(Math.floor(d%864e5/36e5)).padStart(2,'0');document.getElementById('cd-m').textContent=String(Math.floor(d%36e5/6e4)).padStart(2,'0');document.getElementById('cd-s').textContent=String(Math.floor(d%6e4/1e3)).padStart(2,'0');}
+tick();setInterval(tick,1000);
+
+// === TABS ===
+function showTab(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');event.target.classList.add('active');}
+
+// === PRE-READ CHECKS ===
+function togglePR(el){el.querySelector('.pr-check').classList.toggle('checked');}
+
+// === DISCUSSION BOARD WITH PERSISTENT STORAGE ===
+const TEAM = [
+  {name:'Justin Lall',initials:'JL',color:'var(--gold)'},
+  {name:'Camille Lloyd',initials:'CL',color:'#B08520'},
+  {name:'Kristjan Archer',initials:'KA',color:'#A07A1C'},
+  {name:'Mary Kathryn Aviles',initials:'MK',color:'#8C6B16'},
+  {name:'Jennifer Necci Dineen',initials:'JD',color:'#7A5D12'},
+  {name:'Andrew Dugan',initials:'AD',color:'#6B510F'},
+  {name:'Sarah Hogenboom-Jones',initials:'SH',color:'#5C440C'},
+  {name:'Justin McCarthy',initials:'JM',color:'#4D3909'}
+];
+
+let currentUser = null;
+let discussions = {threads:[], votes:{}};
+const STORAGE_KEY = 'trust-media-discussion';
+
+// Render name buttons
+function renderNameButtons(){
+  const c=document.getElementById('nameButtons');
+  c.innerHTML='';
+  TEAM.forEach((m,i)=>{
+    const b=document.createElement('button');
+    b.className='name-btn'+(currentUser===i?' selected':'');
+    b.textContent=m.initials+' — '+m.name.split(' ')[0];
+    b.onclick=()=>{currentUser=i;renderNameButtons();};
+    c.appendChild(b);
+  });
+}
+
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+
+function timeAgo(ts){
+  const now=Date.now(),diff=now-ts;
+  if(diff<60000)return 'just now';
+  if(diff<3600000)return Math.floor(diff/60000)+'m ago';
+  if(diff<86400000)return Math.floor(diff/3600000)+'h ago';
+  return new Date(ts).toLocaleDateString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+}
+
+function getMember(name){return TEAM.find(m=>m.name===name)||{name,initials:name.split(' ').map(w=>w[0]).join(''),color:'var(--ink-50)'};}
+
+// Load from storage
+async function loadData(){
+  try{
+    const result = await window.storage.get(STORAGE_KEY, true);
+    if(result && result.value){
+      discussions = JSON.parse(result.value);
+    }
+  }catch(e){
+    // Key doesn't exist yet, start fresh
+    discussions = {threads:[], votes:{}};
+  }
+  renderThreads();
+}
+
+// Save to storage
+async function saveData(){
+  try{
+    await window.storage.set(STORAGE_KEY, JSON.stringify(discussions), true);
+  }catch(e){
+    console.error('Storage save failed:',e);
+  }
+}
+
+// Add a new thread
+async function addPost(){
+  if(currentUser===null){alert('Please select your name first.');return;}
+  const title=document.getElementById('postTitle').value.trim();
+  if(!title){alert('Please enter a topic or question.');return;}
+  const body=document.getElementById('postBody').value.trim();
+  const tag=document.getElementById('postTag').value;
+  const thread={
+    id:'t_'+Date.now()+'_'+Math.random().toString(36).substr(2,5),
+    author:TEAM[currentUser].name,
+    title,body,tag,
+    ts:Date.now(),
+    upvotes:0,
+    replies:[]
+  };
+  discussions.threads.unshift(thread);
+  await saveData();
+  document.getElementById('postTitle').value='';
+  document.getElementById('postBody').value='';
+  renderThreads();
+}
+
+// Vote on a thread
+async function voteThread(id){
+  if(currentUser===null){alert('Please select your name first.');return;}
+  const voteKey=TEAM[currentUser].name+'::'+id;
+  const thread=discussions.threads.find(t=>t.id===id);
+  if(!thread)return;
+  if(discussions.votes[voteKey]){
+    thread.upvotes=Math.max(0,thread.upvotes-1);
+    delete discussions.votes[voteKey];
+  }else{
+    thread.upvotes++;
+    discussions.votes[voteKey]=true;
+  }
+  await saveData();
+  renderThreads();
+}
+
+// Add reply
+async function addReply(threadId){
+  if(currentUser===null){alert('Please select your name first.');return;}
+  const input=document.getElementById('reply-'+threadId);
+  const text=input.value.trim();
+  if(!text)return;
+  const thread=discussions.threads.find(t=>t.id===threadId);
+  if(!thread)return;
+  thread.replies.push({
+    author:TEAM[currentUser].name,
+    text,
+    ts:Date.now()
+  });
+  await saveData();
+  input.value='';
+  renderThreads();
+}
+
+// Delete a thread
+async function deleteThread(id){
+  if(!confirm('Delete this thread and all replies?'))return;
+  discussions.threads=discussions.threads.filter(t=>t.id!==id);
+  // Clean up votes for this thread
+  Object.keys(discussions.votes).forEach(k=>{if(k.includes(id))delete discussions.votes[k];});
+  await saveData();
+  renderThreads();
+}
+
+// Render all threads
+function renderThreads(){
+  const container=document.getElementById('threadList');
+  if(!discussions.threads.length){
+    container.innerHTML=`<div class="empty-threads"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>No discussions yet. Select your name above and start a conversation!</div>`;
+    return;
+  }
+  let html='';
+  discussions.threads.forEach(t=>{
+    const m=getMember(t.author);
+    const hasVoted=currentUser!==null && discussions.votes[TEAM[currentUser].name+'::'+t.id];
+
+    html+=`<div class="thread-card">
+      <div class="thread-header">
+        <div class="thread-avatar" style="background:${m.color}">${m.initials}</div>
+        <div class="thread-meta">
+          <div><span class="thread-author">${esc(t.author)}</span><span class="thread-time">${timeAgo(t.ts)}</span></div>
+          <div class="thread-title">${esc(t.title)}</div>
+          ${t.body?`<div class="thread-body">${esc(t.body)}</div>`:''}
+          <span class="thread-tag tag-${t.tag}">${t.tag}</span>
+        </div>
+        <button class="thread-delete" onclick="deleteThread('${t.id}')" title="Delete thread">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="thread-actions">
+        <button class="thread-action-btn ${hasVoted?'voted':''}" onclick="voteThread('${t.id}')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          ${t.upvotes} upvote${t.upvotes!==1?'s':''}
+        </button>
+        <span class="thread-action-btn" style="cursor:default;color:var(--ink-30);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          ${t.replies.length} repl${t.replies.length!==1?'ies':'y'}
+        </span>
+      </div>`;
+
+    // Replies section
+    html+=`<div class="thread-replies">`;
+    t.replies.forEach(r=>{
+      const rm=getMember(r.author);
+      html+=`<div class="reply">
+        <div class="reply-avatar" style="background:${rm.color}">${rm.initials}</div>
+        <div class="reply-content">
+          <div><span class="reply-author">${esc(r.author)}</span><span class="reply-time">${timeAgo(r.ts)}</span></div>
+          <div class="reply-text">${esc(r.text)}</div>
+        </div>
+      </div>`;
+    });
+    html+=`<div class="reply-input-wrap">
+      <input type="text" class="reply-input" id="reply-${t.id}" placeholder="Write a reply…" maxlength="500" onkeydown="if(event.key==='Enter')addReply('${t.id}')">
+      <button class="reply-btn" onclick="addReply('${t.id}')">Reply</button>
+    </div></div></div>`;
+  });
+  container.innerHTML=html;
+}
+
+// Init
+renderNameButtons();
+if(window.storage){
+  loadData();
+}else{
+  // Fallback if storage not available
+  renderThreads();
+}
+</script>
+</body>
+</html>
